@@ -30,3 +30,14 @@ Ans. - select name from students where marks>75 order by right(name,3),ID;
 
 Que 6. - Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
 Ans. - select name from employee order by name;
+
+
+Que 7. Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than  per month who have been employees for less than  months. Sort your result by ascending employee_id.
+
+Ans. - select name from employee where salary>2000 and months<10;
+
+Que 8. Query the two cities in STATION with the shortest and longest CITY names, as well as their respective lengths (i.e.: number of characters in the name). If there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically.
+
+Ans. - (select CITY, length(CITY) from STATION order by length(city) asc, CITY asc limit 1) union
+(select CITY, length(city) from STATION order by length(city) desc, CITY asc limit 1);
+
